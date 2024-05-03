@@ -16,8 +16,12 @@ In diesem Projekt wollen wir ein Sudoku mit Python programmieren, welches auch i
 
 | US-№ | Verbindlichkeit | Typ  | Beschreibung                       |
 | ---- | --------------- | ---- | ---------------------------------- |
-| 1    |                 |      | Als User möchte ich,  |
-| ...  |                 |      |                                    |
+| 1    |  Muss               | Funktional     | Als User möchte ich das Sudoku in verschiedenen Schwierigkeitsstufen spielen können, damit ich es meinen Fähigkeiten anpassen kann.  |
+| 2    |  Muss               | Funktional     | Als User möchte ich das Sudoku sehen können, damit ich das Spiel spielen kann. |
+| 3    | Muss            | Funktional       | Als User möchte ich Zahlen in leere Felder eingeben können, damit ich das Spiel lösen kann. |
+| 4    |   Muss       | Funktional    | Als User möchte ich eine Erklärung haben, wie das Spiel funktioniert damit ich das Spiel lernen kann. |
+| 5 |  Muss     | Funktional    | Als User möchte ich das Sudoku lösen können, damit ich überprüfen kann ob meine Lösung korrekt ist. |
+| 6  |  Muss     | Funktional    | Als User möchte ich ein Benachrichtigung bekommen, falls ich eine falsch Zahl eingegeben habe, damit ich das Spiel fertig spielen kann. |
 
 ✍️ Jede User Story hat eine ganzzahlige Nummer (1, 2, 3 etc.), eine Verbindlichkeit (Muss oder Kann?), und einen Typ (Funktional, Qualität, Rand). Die User Story selber hat folgende Form: *Als ein 🤷‍♂️ möchte ich 🤷‍♂️, damit 🤷‍♂️*.
 
