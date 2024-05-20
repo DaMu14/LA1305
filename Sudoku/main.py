@@ -1,13 +1,17 @@
 import tkinter as tk
-from tkinter import messagebox
-import random
-import copy
 
-def create_sudoku_field():
- i=0
- for y in range (0, 900, 100):
-  for x in range (0, 900, 100):
-   fields[i] = [pygame.Rect(x, y, 100, 100), sudoku[i]]
-   pygame.draw.rect(screen, (0, 0, 0), fields[i][0], 1)
+root = tk.Tk()
 
-   
+# Textausgabe erzeugen
+label1 = tk.Label(root, text="Hallo Welt")
+label1.pack(side="top")
+
+schaltf1 = tk.Button(root, text="einfach", command=root.destroy)
+schaltf1.pack(side="left")
+ 
+schaltf2 = tk.Button(root, text="Mittel")
+schaltf2.pack(side="bottom")
+schaltf3 = tk.Button(root, text="Schwierig")
+schaltf3.pack(side="right")
+
+root.mainloop()
