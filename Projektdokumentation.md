@@ -20,17 +20,20 @@ In diesem Projekt wollen wir ein Sudoku mit Python programmieren, welches auch i
 | 2    |  Muss               | Funktional     | Als User möchte ich das Sudoku sehen können, damit ich das Spiel spielen kann. |
 | 3    | Muss            | Funktional       | Als User möchte ich Zahlen in leere Felder eingeben können, damit ich das Spiel lösen kann. |
 | 4    |   Muss       | Funktional    | Als User möchte ich eine Erklärung haben, wie das Spiel funktioniert damit ich das Spiel lernen kann. |
-| 5 |  Muss     | Funktional    | Als User möchte ich das Sudoku lösen können, damit ich überprüfen kann ob meine Lösung korrekt ist. |
+| 5 |  Muss     | Funktional    | Als User möchte beim Sudoku sehen können, ob meine Zahl richtig ist die ich eingegeben habe, damit ich überprüfen kann ob meine Lösung korrekt ist. |
 | 6  |  Muss     | Funktional    | Als User möchte ich ein Benachrichtigung bekommen, falls ich eine falsch Zahl eingegeben habe, damit ich das Spiel fertig spielen kann. |
 
-✍️ Jede User Story hat eine ganzzahlige Nummer (1, 2, 3 etc.), eine Verbindlichkeit (Muss oder Kann?), und einen Typ (Funktional, Qualität, Rand). Die User Story selber hat folgende Form: *Als ein 🤷‍♂️ möchte ich 🤷‍♂️, damit 🤷‍♂️*.
 
 ### 1.3 Testfälle
 
 | TC-№ | Ausgangslage | Eingabe | Erwartete Ausgabe |
 | ---- | ------------ | ------- | ----------------- |
-| 1.1  |              |         |                   |
-| ...  |              |         |                   |
+| 1.1  | Spiel gestartet | Schwirigkeitsstufe auswählen | Sudoku mit gewählter Schwirigkeitsstufe |
+| 2.1  | Schwirigkeitsstufe gewählt | -   | Sudoku Feld |
+| 3.1  | Sudoku Fled erstellt | Zahl | -                  |
+| 4.1  | Spiel gestartet | Button für Anleitung | Spielerklärung |
+| 5.1  | Sudoku Fled erstellt | Richtige Zahl  | Eingabe korrekt! |
+| 6.1  | Sudoku Fled erstellt | Falsche Zahl  | Eingabe falsch! |
 
 ✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
 
