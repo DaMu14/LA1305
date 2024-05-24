@@ -28,22 +28,23 @@ def solve_sudoku(board):
             if solve_sudoku(board):
                 return True
             board[row][col] = 0
+    return False
     
 def find_empty_cell(board):
     for i in range(9):
         for j in range(9):
             if board[i][j] == 0:
-                return i, j
+                return (i, j)
     return None
 def generate_sudoku(difficulty):
     board = [[0 for _ in range(9)] for _ in range(9)]
     solve_sudoku(board)
     num_of_empty_cells = 0
-    if difficulty == 'easy':
+    if difficulty == "easy":
         num_of_empty_cells = 30
-    elif difficulty == 'medium':
+    elif difficulty == "medium":
         num_of_empty_cells = 40
-    elif difficulty == 'hard':
+    elif difficulty == "hard":
         num_of_empty_cells = 50
     temp_board = copy.deepcopy(board)
     for _ in range(num_of_empty_cells):
@@ -51,7 +52,7 @@ def generate_sudoku(difficulty):
         while temp_board[row][col] == 0:
             row, col = random.randint(0, 8), random.randint(0, 8)
         temp_board[row][col] = 0
-    return temp.board
+    return temp_board
 
 class SudokuUI:
     def __init__(self, root):
@@ -66,13 +67,13 @@ class SudokuUI:
         self.difficulty_frame = tk.Frame(self.root)
         self.difficulty_frame.pack()
 
-        self.easy_button = tk.Button(self.difficulty_frame, text="Einfach", command=self.generate_easy)
+        self.easy_button = tk.Button(self.difficulty_frame, text="Einfach", command=lambda: self.start_game("easy"))
         self.easy_button.pack(side=tk.LEFT, padx=10, pady=10)
 
-        self.medium_button = tk.Button(self.difficulty_frame, text="Mittel", command=self.generate_medium)
+        self.medium_button = tk.Button(self.difficulty_frame, text="Mittel", command=lambda: self.start_game("medium"))
         self.medium_button.pack(side=tk.LEFT, padx=10, pady=10)
 
-        self.hard_button = tk.Button(self.difficulty_frame, text="Schwer", command=self.generate_hard)
+        self.hard_button = tk.Button(self.difficulty_frame, text="Schwer", command=lambda: self.start_game("hard"))
         self.hard_button.pack(side=tk.LEFT, padx=10, pady=100)
 
         self.frame = tk.Frame(self.root)
@@ -95,27 +96,26 @@ class SudokuUI:
         self.check_button.pack()
         self.reset_button.pack()
         self.validate_button.pack()
-        self.generate_sudoku(difficulty)
+        self.generate_sudoku(self.difficulty)
 
-    def generate_sudoku(self,):
+    def generate_sudoku(self, difficulty):
         self.board = generate_sudoku(self.difficulty)
         self.solution = copy.deepcopy(self.board)
         solve_sudoku(self.solution)
         self.update_board()
  
-    def generate_easy(self):
-        self.difficulty = 'easy'
-        self.generate_sudoku()
+   
+    def update_board(self):
+        for i in range(9):
+            for j in range(9):
+                if self.board[i][j] != 0:
+                    self.entries[i][j].delete(0, tk.END)
+                    self.entries[i][j].insert(0, self.board[i][j])
+                    self.entries[i][j].config(state="readonly")
+                else:
+                    self.entries[i][j].config(state="normal")
+                    self.entries[i][j].delete(0, tk.END)
 
-    def generate_medium(self):
-        self.difficulty = 'medium'
-        self.generate_sudoku()
-
-    def generate_hard(self):
-        self.difficulty = 'hard'
-        self.generate_sudoku()
-
-     
 
     def show_solution(self):
         for i in range(9):
