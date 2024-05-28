@@ -36,6 +36,7 @@ def find_empty_cell(board):
             if board[i][j] == 0:
                 return (i, j)
     return None
+
 def generate_sudoku(difficulty):
     board = [[0 for _ in range(9)] for _ in range(9)]
     solve_sudoku(board)
@@ -89,17 +90,17 @@ class SudokuUI:
         self.reset_button = tk.Button(self.root, text="Neues Spiel", command=self.reset_game)
         self.validate_button = tk.Button(self.root, text="Einzelne Zahl prüfen", command=self.validate_single)
 
-    def start_game(self):
+    def start_game(self, difficulty):
         self.difficulty_frame.pack_forget()
         self.frame.pack()
         self.solve_button.pack()
         self.check_button.pack()
         self.reset_button.pack()
         self.validate_button.pack()
-        self.generate_sudoku(self.difficulty)
+        self.generate_sudoku(difficulty)
 
     def generate_sudoku(self, difficulty):
-        self.board = generate_sudoku(self.difficulty)
+        self.board = generate_sudoku(difficulty)
         self.solution = copy.deepcopy(self.board)
         solve_sudoku(self.solution)
         self.update_board()
@@ -120,27 +121,36 @@ class SudokuUI:
     def show_solution(self):
         for i in range(9):
             for j in range(9):
+                self.entries[i][j].config(state="normal")
                 self.entries[i][j].delete(0, tk.END)
-                self.entries[i][j].insert(0, str(self.solution[i][j]))
+                self.entries[i][j].insert(0, self.solution[i][j])
+                self.entries[i][j].config(state="readonly")
 
     def check_solution(self):
+        user_solution = []
         for i in range(9):
-            row= []
+            row = []
             for j in range(9):
-                if self.entries[i][j].get() != str(self.solution[i][j]):
-                    print("Die Lösung ist falsch")
-                    return
-        print("Sie haben das Sudoku gelöst")
+                value = self.entries[i][j].get()
+                if value.isdigit():
+                    row.append(int(value))
+                else:
+                    row.append(0)
+            user_solution.append(row)
+        if user_solution == self.solution:
+            messagebox.showinfo("Sudoku", "Glückwunsch! Sie haben das Rätsel gelöst.")
+        else:
+            messagebox.showerror("Sudoku", "Die Lösung ist nicht korrekt.")
 
     def validate_single(self):
         for i in range(9):
             for j in range(9):
                 value = self.entries[i][j].get()
-                if value.is_valid() and self.board[i][j] == 0:
-                    if not is_valid_move(self.board, i, j, int(value)):
-                        messagebox.showerror("Die Zahl {value} an Position ({i + 1}, {j + 1}) ist falsch.")
+                if value.isdigit() and self.board[i][j] == 0:
+                    if not is_valid(self.board, i, j, int(value)):
+                        messagebox.showerror("Sudoku", f"Die Zahl {value} an Position ({i + 1}, {j + 1}) ist ungültig.")
                         return
-                    messagebox.showinfo("Alle Zahlen sind korrekt.")
+                    messagebox.showinfo("Sudoku", "Alle eingegebenen Zahlen sind korrekt.")
 
     def reset_game(self):
         self.frame.pack_forget()
