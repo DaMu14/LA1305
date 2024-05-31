@@ -77,6 +77,10 @@ class SudokuUI:
         self.hard_button = tk.Button(self.difficulty_frame, text="Schwer", command=lambda: self.start_game("hard"))
         self.hard_button.pack(side=tk.LEFT, padx=10, pady=100)
 
+        self.explanation_button = tk.Button(self.difficulty_frame, text="Anleitung", command=self.show_explanation)
+        self.explanation_button.pack(side=tk.LEFT, padx=10, pady=10)
+
+
         self.frame = tk.Frame(self.root)
 
         for i in range(9):
@@ -89,6 +93,17 @@ class SudokuUI:
         self.check_button = tk.Button(self.root, text="Prüfen", command=self.check_solution)
         self.reset_button = tk.Button(self.root, text="Neues Spiel", command=self.reset_game)
         self.validate_button = tk.Button(self.root, text="Einzelne Zahl prüfen", command=self.validate_single)
+
+    def show_explanation(self):
+        explanation = (
+            "Was ist Sudoku?\n\n"
+            "Ziel des Spiels ist es, die leeren Zellen in einem 9x9-Gitter so zu füllen, dass jede Spalte, jede Reihe und jedes der neun 3x3-Untergitter die Zahlen 1 bis 9 genau einmal enthält.\n\n"
+            "So spielt man:\n"
+            "1. Wähle einen Schwierigkeitsgrad aus.\n"
+            "2. Fülle die leeren Zellen mit Zahlen von 1 bis 9.\n"
+            "3. Nutze die Buttons, um die Lösung zu prüfen oder dir die Lösung anzeigen zu lassen."
+        )
+        messagebox.showinfo("Spielerklärung", explanation)
 
     def start_game(self, difficulty):
         self.difficulty_frame.pack_forget()
