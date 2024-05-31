@@ -17,24 +17,28 @@ In diesem Projekt wollen wir ein Sudoku mit Python programmieren, welches auch i
 | US-№ | Verbindlichkeit | Typ  | Beschreibung                       |
 | ---- | --------------- | ---- | ---------------------------------- |
 | 1    |  Muss               | Funktional     | Als User möchte ich das Sudoku in verschiedenen Schwierigkeitsstufen spielen können, damit ich es meinen Fähigkeiten anpassen kann.  |
-| 2    |  Muss               | Funktional     | Als User möchte ich das Sudoku sehen können, damit ich das Spiel spielen kann. |
+| 2    |  Muss               | Funktional     | Als User möchte ich das Sudoku starten können, damit ich die Schwierigkeitsstufen wählen kann. |
 | 3    | Muss            | Funktional       | Als User möchte ich Zahlen in leere Felder eingeben können, damit ich das Spiel lösen kann. |
 | 4    |   Muss       | Funktional    | Als User möchte ich eine Erklärung haben, wie das Spiel funktioniert damit ich das Spiel lernen kann. |
-| 5 |  Muss     | Funktional    | Als User möchte beim Sudoku sehen können, ob meine Zahl richtig ist die ich eingegeben habe, damit ich überprüfen kann ob meine Lösung korrekt ist. |
-| 6  |  Muss     | Funktional    | Als User möchte ich ein Benachrichtigung bekommen, falls ich eine falsch Zahl eingegeben habe, damit ich das Spiel fertig spielen kann. |
-| 7  |  Muss     | Funktional    | Als User möchte ich 
+| 5  |  Muss     | Funktional    | Als User möchte ich eine einzelne Zahl überprüfen können, damit ich weiss ob ich Fehler habe. |
+| 6   | Muss     | Funktional     | Als User möchte ich mein ganzes Sudoku überprüfen können, damit ich weiss ob ich Fehler habe.  |
+| 7  |  Muss     | Funktional    | Als User möchte ich bei den verschiedenen Schwierigkeitsstufen unterschiedlich viele Felder frei haben, damit ich das Spiel besser lernen kann. |
 
 
 ### 1.3 Testfälle
 
 | TC-№ | Ausgangslage | Eingabe | Erwartete Ausgabe |
 | ---- | ------------ | ------- | ----------------- |
-| 1.1  | Spiel gestartet | Schwierigkeitsstufe auswählen | Sudoku mit gewählter Schwierigkeitsstufe |
-| 2.1  | Schwierigkeitsstufe gewählt | -   | Sudoku Feld |
-| 3.1  | Sudoku Feld erstellt | Zahl | -                  |
+| 1.1  | Spiel gestartet | Einfach auswählen | Sudoku mit gewählter Schwierigkeitsstufe |
+| 1.2  | Spiel ist gestartet | Mittel auswählen  | Sudoku mit gewählter Schwierigkeitsstufe  |
+| 1.3  | Spiel ist gestartet | Schwer auswählen | Sudoku mit gewählter Schwierigkeitsstufe  |
+| 2.1  | Schwierigkeitsstufe gewählt | Spiel starten   | Anzeige von Schwierigkeitsstufen |
+| 3.1  | Sudoku Feld erstellt | 1 | -                  |
 | 4.1  | Spiel gestartet | Button für Anleitung | Spielerklärung |
-| 5.1  | Sudoku Feld erstellt | Richtige Zahl  | Eingabe korrekt! |
-| 6.1  | Sudoku Feld erstellt | Falsche Zahl  | Eingabe falsch! |
+| 5.1  | Sudoku Feld erstellt | 2  | Die Zahl 2 an Position 1, 2 ist ungültig   |
+| 5.2  | Sudoku Feld erstellt  | 2 | Alle eingegebenen Zahlen sind korrekt |
+| 6.1  | Sudoku gelöst | Prüfen auswählen  | Glückwunsch! Sie haben das Rätsel gelöst |
+| 6.2  | Sudoku gelöst | Prüfen auswählen  | Die Lösung ist nicht korrekt. |
 
 ✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
 
