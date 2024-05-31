@@ -7,13 +7,13 @@ import copy
 def is_valid(board, row, col, num):
     if num in board[row]:
         return False
-    for i in range(9):
-        if board[i][col] == num:
+    for x in range(9):
+        if board[x][col] == num:
             return False
     start_row, start_col = 3 * (row // 3), 3 * (col // 3)
-    for i in range(start_row, start_row + 3):
-        for j in range(start_col, start_col + 3):
-            if board[i][j] == num:
+    for x in range(start_row, start_row + 3):
+        for y in range(start_col, start_col + 3):
+            if board[x][y] == num:
                 return False
     return True
 
@@ -31,10 +31,10 @@ def solve_sudoku(board):
     return False
     
 def find_empty_cell(board):
-    for i in range(9):
-        for j in range(9):
-            if board[i][j] == 0:
-                return (i, j)
+    for x in range(9):
+        for y in range(9):
+            if board[x][y] == 0:
+                return (x, y)
     return None
 
 def generate_sudoku(difficulty):
@@ -83,11 +83,11 @@ class SudokuUI:
 
         self.frame = tk.Frame(self.root)
 
-        for i in range(9):
-            for j in range(9):
+        for x in range(9):
+            for y in range(9):
                 entry = tk.Entry(self.frame, width=3, font=("Arial", 18), justify="center")
-                entry.grid(row=i, column=j, padx=5, pady=5)
-                self.entries[i][j] = entry
+                entry.grid(row=x, column=y, padx=5, pady=5)
+                self.entries[x][y] = entry
 
         self.solve_button = tk.Button(self.root, text="Lösung anzeigen", command=self.show_solution)
         self.check_button = tk.Button(self.root, text="Prüfen", command=self.check_solution)
@@ -122,31 +122,31 @@ class SudokuUI:
  
    
     def update_board(self):
-        for i in range(9):
-            for j in range(9):
-                if self.board[i][j] != 0:
-                    self.entries[i][j].delete(0, tk.END)
-                    self.entries[i][j].insert(0, self.board[i][j])
-                    self.entries[i][j].config(state="readonly")
+        for x in range(9):
+            for y in range(9):
+                if self.board[x][y] != 0:
+                    self.entries[x][y].delete(0, tk.END)
+                    self.entries[x][y].insert(0, self.board[x][y])
+                    self.entries[x][y].config(state="readonly")
                 else:
-                    self.entries[i][j].config(state="normal")
-                    self.entries[i][j].delete(0, tk.END)
+                    self.entries[x][y].config(state="normal")
+                    self.entries[x][y].delete(0, tk.END)
 
 
     def show_solution(self):
-        for i in range(9):
-            for j in range(9):
-                self.entries[i][j].config(state="normal")
-                self.entries[i][j].delete(0, tk.END)
-                self.entries[i][j].insert(0, self.solution[i][j])
-                self.entries[i][j].config(state="readonly")
+        for x in range(9):
+            for y in range(9):
+                self.entries[x][y].config(state="normal")
+                self.entries[x][y].delete(0, tk.END)
+                self.entries[x][y].insert(0, self.solution[x][y])
+                self.entries[x][y].config(state="readonly")
 
     def check_solution(self):
         user_solution = []
-        for i in range(9):
+        for x in range(9):
             row = []
-            for j in range(9):
-                value = self.entries[i][j].get()
+            for y in range(9):
+                value = self.entries[x][y].get()
                 if value.isdigit():
                     row.append(int(value))
                 else:
@@ -158,12 +158,12 @@ class SudokuUI:
             messagebox.showerror("Sudoku", "Die Lösung ist nicht korrekt.")
 
     def validate_single(self):
-        for i in range(9):
-            for j in range(9):
-                value = self.entries[i][j].get()
-                if value.isdigit() and self.board[i][j] == 0:
-                    if not is_valid(self.board, i, j, int(value)):
-                        messagebox.showerror("Sudoku", f"Die Zahl {value} an Position ({i + 1}, {j + 1}) ist ungültig.")
+        for x in range(9):
+            for y in range(9):
+                value = self.entries[x][y].get()
+                if value.isdigit() and self.board[x][y] == 0:
+                    if not is_valid(self.board, x, y, int(value)):
+                        messagebox.showerror("Sudoku", f"Die Zahl {value} an Position ({x + 1}, {y + 1}) ist ungültig.")
                         return
                     messagebox.showinfo("Sudoku", "Alle eingegebenen Zahlen sind korrekt.")
 
