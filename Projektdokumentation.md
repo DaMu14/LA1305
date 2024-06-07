@@ -19,20 +19,22 @@ In diesem Projekt wollen wir ein Sudoku mit Python programmieren, welches auch i
 | 1    |  Muss               | Funktional     | Als User möchte ich das Sudoku in verschiedenen Schwierigkeitsstufen spielen können, damit ich es meinen Fähigkeiten anpassen kann.  |
 | 2    |  Muss               | Funktional     | Als User möchte ich das Sudoku starten können, damit ich die Schwierigkeitsstufen wählen kann. |
 | 3    | Muss            | Funktional       | Als User möchte ich Zahlen in leere Felder eingeben können, damit ich das Spiel lösen kann. |
-| 4    |   Muss       | Funktional    | Als User möchte ich eine Erklärung haben, wie das Spiel funktioniert damit ich das Spiel lernen kann. |
+| 4    |   Muss       | Funktional    | Als User möchte ich eine Anleitung haben, wie das Spiel funktioniert damit ich das Spiel lernen kann. |
 | 5  |  Muss     | Funktional    | Als User möchte ich eine einzelne Zahl überprüfen können, damit ich weiss ob ich Fehler habe. |
 | 6   | Muss     | Funktional     | Als User möchte ich mein ganzes Sudoku überprüfen können, damit ich weiss ob ich Fehler habe.  |
 | 7  |  Muss     | Funktional    | Als User möchte ich bei den verschiedenen Schwierigkeitsstufen unterschiedlich viele Felder frei haben, damit ich das Spiel besser lernen kann. |
+| 8  | Muss       | Funktional    | Als User möchte ich das Spiel neu starten können , damit ich ohne Probleme weiterspielen kann. |
+| 9  | Muss |    Funktional   | Als User möchte ich die eingegebene Zahl löschen können, damit ich meine Fehler verbessern kann. |
 
 
 ### 1.3 Testfälle
 
 | TC-№ | Ausgangslage | Eingabe | Erwartete Ausgabe |
 | ---- | ------------ | ------- | ----------------- |
-| 1.1  | Spiel gestartet | Einfach auswählen | Sudoku mit gewählter Schwierigkeitsstufe |
-| 1.2  | Spiel ist gestartet | Mittel auswählen  | Sudoku mit gewählter Schwierigkeitsstufe  |
-| 1.3  | Spiel ist gestartet | Schwer auswählen | Sudoku mit gewählter Schwierigkeitsstufe  |
-| 2.1  | Schwierigkeitsstufe gewählt | Spiel starten   | Anzeige von Schwierigkeitsstufen |
+| 1.1  | Schwierigkeitsstufen werden angezeigt | Einfach auswählen | Sudoku mit gewählter Schwierigkeitsstufe |
+| 1.2  | Schwierigkeitsstufen werden angezeigt | Mittel auswählen  | Sudoku mit gewählter Schwierigkeitsstufe  |
+| 1.3  | Schwierigkeitsstufen werden angezeigt | Schwer auswählen | Sudoku mit gewählter Schwierigkeitsstufe  |
+| 2.1  | Spiel starten | -  | Anzeige von Schwierigkeitsstufen |
 | 3.1  | Sudoku Feld erstellt | 1 | -                  |
 | 4.1  | Spiel gestartet | Button für Anleitung | Spielerklärung |
 | 5.1  | Sudoku Feld erstellt | 2  | Die Zahl 2 an Position 1, 2 ist ungültig   |
