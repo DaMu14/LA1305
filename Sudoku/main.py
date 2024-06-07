@@ -155,7 +155,18 @@ class SudokuUI:
         if user_solution == self.solution:
             messagebox.showinfo("Sudoku", "Glückwunsch! Sie haben das Rätsel gelöst.")
         else:
+            self.mark_invalid_fields(user_solution)
             messagebox.showerror("Sudoku", "Die Lösung ist nicht korrekt.")
+
+    def mark_invalid_fields(self):
+        for y in range(9):
+            for x in range(9):
+                value = self.entries[y][x].get()
+                if value.isdigit() and self.board[y][x] == 0:
+                    if not is_valid(self.board, y, x, int(value)):
+                        self.entries[y][x].config(bg="red")
+                    else:
+                        self.entries[y][x].config(bg="white")
 
     def validate_single(self):
         invalid_positions = []
@@ -165,6 +176,10 @@ class SudokuUI:
                 if value.isdigit() and self.board[y][x] == 0:
                     if not is_valid(self.board, y, x, int(value)):
                          invalid_positions.append((y + 1, x + 1))
+                         self.entries[y][x].config(bg="red")
+                    else:
+                        self.entries[y][x].config(bg="white")
+
 
         if invalid_positions:
             message = "Die folgenden Positionen enthalten ungültige Zahlen:\n"
