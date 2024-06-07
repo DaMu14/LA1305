@@ -57,8 +57,15 @@ In diesem Projekt wollen wir ein Sudoku mit Python programmieren, welches auch i
 
 | AP-№ | Frist | Zuständig | Beschreibung | geplante Zeit |
 | ---- | ----- | --------- | ------------ | ------------- |
-| 1.A  |       |           |              |               |
-| ...  |       |           |              |               |
+| 1.A  | 07.06.2024  | Müller | Schwierigkeitsstufen | 3*45'    |
+| 2.A  | 07.06.2024  | Müller | Sudoku starten       | 30'      |
+| 3.A  | 07.06.2024  | Müller | Eingabe in Felder    | 2*45     |
+| 4.A  | 07.06.2024  | Hitz   | Anleitung            | 30'      |
+| 5.A  | 07.06.2024  | Hitz   | Überprüfung einzelner Zahlen    |  2*45' |
+| 6.A  | 07.06.2024  | Hitz   | Überprüfung alles    | 45'      |
+| 7.A  | 07.06.2024  | Müller | Schwierigkeitsstufen Anzahl leere Felder | 2*45' |
+| 8.A  | 07.06.2024  | Müller | Neustart             | 30'      |
+| 9.A  | 07.06.2024  | Hitz   | Zahl löschen         | 30'      |
 
 Total: 
 
