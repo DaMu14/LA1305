@@ -35,12 +35,17 @@ In diesem Projekt wollen wir ein Sudoku mit Python programmieren, welches auch i
 | 1.2  | Schwierigkeitsstufen werden angezeigt | Mittel auswählen  | Sudoku mit gewählter Schwierigkeitsstufe  |
 | 1.3  | Schwierigkeitsstufen werden angezeigt | Schwer auswählen | Sudoku mit gewählter Schwierigkeitsstufe  |
 | 2.1  | Spiel starten | -  | Anzeige von Schwierigkeitsstufen |
-| 3.1  | Sudoku Feld erstellt | 1 | -                  |
+| 3.1  | Sudoku Feld erstellt | 1 | Zahl wird angezeigt                  |
 | 4.1  | Spiel gestartet | Button für Anleitung | Spielerklärung |
-| 5.1  | Sudoku Feld erstellt | 2  | Die Zahl 2 an Position 1, 2 ist ungültig   |
-| 5.2  | Sudoku Feld erstellt  | 2 | Alle eingegebenen Zahlen sind korrekt |
+| 5.1  | Zahl 2 in Position 1,2 eingegeben | Einzelne Zahlen prüfen auswählen  | Die Zahl 2 an Position 1, 2 ist ungültig   |
+| 5.2  | Zahl 3 in Position 1,2 eingegeben  | Einzelne Zahlen prüfen auswählen | Alle eingegebenen Zahlen sind korrekt |
 | 6.1  | Sudoku gelöst | Prüfen auswählen  | Glückwunsch! Sie haben das Rätsel gelöst |
 | 6.2  | Sudoku gelöst | Prüfen auswählen  | Die Lösung ist nicht korrekt. |
+| 7.1  | Spiel ist gestartet | Einfach auswählen | Sudokufeld mit 30 leeren Felder |
+| 7.2  | Spiel ist gestartet | Mittel auswählen  | Sudokufeld mit 40 leeren Felder |
+| 7.3  | Spiel ist gestartet | Schwer auswählen  | Sudokufeld mit 50 leeren Felder |
+| 8.1  | Sudoku gelöst   | neues Spiel auswählen  | Schwierigkeitsstufen werden angezeigt |
+| 9.1  | Anzeige von falscher Zahl | Zahl löschen   | Feld ist leer | 
 
 ✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
 
