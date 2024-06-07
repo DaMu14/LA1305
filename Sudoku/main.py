@@ -22,7 +22,9 @@ def solve_sudoku(board):
     if not empty_cell:
         return True 
     row, col = empty_cell
-    for num in range(1, 10):
+    numbers = list(range(1, 10))
+    random.shuffle(numbers)
+    for num in numbers:
         if is_valid(board, row, col, num):
             board[row][col] = num
             if solve_sudoku(board):
@@ -158,14 +160,21 @@ class SudokuUI:
             messagebox.showerror("Sudoku", "Die Lösung ist nicht korrekt.")
 
     def validate_single(self):
+        invalid_positions = []
         for y in range(9):
             for x in range(9):
                 value = self.entries[y][x].get()
                 if value.isdigit() and self.board[y][x] == 0:
                     if not is_valid(self.board, y, x, int(value)):
-                        messagebox.showerror("Sudoku", f"Die Zahl {value} an Position ({y + 1}, {x + 1}) ist ungültig.")
-                        return
-                    messagebox.showinfo("Sudoku", "Alle eingegebenen Zahlen sind korrekt.")
+                        invalid_positions.append((y + 1, x + 1))
+    
+        if invalid_positions:
+            message = "Die folgenden Positionen enthalten ungültige Zahlen:\n"
+            message += "\n".join([f"({row}, {col})" for row, col in invalid_positions])
+            messagebox.showerror("Sudoku", message)
+        else:
+            messagebox.showinfo("Sudoku", "Alle eingegebenen Zahlen sind korrekt.")
+
 
     def reset_game(self):
         self.frame.pack_forget()
