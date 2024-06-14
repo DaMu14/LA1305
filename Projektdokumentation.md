@@ -80,8 +80,15 @@ Total: 570'
 
 | AP-№ | Datum | Zuständig | geplante Zeit | tatsächliche Zeit |
 | ---- | ----- | --------- | ------------- | ----------------- |
-| 1.A  |       |           |               |                   |
-| ...  |       |           |               |                   |
+| 1.A  | 24.05.2024 | Müller  | 30' | 30'     |
+| 2.A  | 24.05.2024 | Müller  | 30' | 30      |
+| 3.A  | 31.05.2024 | Müller  | 2*45 | 60'    |
+| 4.A  | 31.05.2024 | Hitz    | 30' | 30'     |
+| 5.A  | 07.06.2024 | Hitz    | 2*45' | 2*45' |
+| 6.A  | 07.06.2024 | Hitz    | 45'   |  60'  |
+| 7.A  | 22.05.2024 | Müller  | 2*45'         |  2*45'         |
+| 8.A  | 31.05.2024 | Müller  | 30'           |  30'           |
+| 9.A  | 22.05.2024 | Hitz    | 30'           |  30'           |
 
 ✍️ Tragen Sie jedes Mal, wenn Sie ein Arbeitspaket abschließen, hier ein, wie lang Sie effektiv dafür hatten.
 
