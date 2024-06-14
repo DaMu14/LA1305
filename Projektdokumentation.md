@@ -49,7 +49,6 @@ In diesem Projekt wollen wir ein Sudoku mit Python programmieren, welches auch i
 | 9.1  | Anzeige von falscher Zahl | Zahl löschen   | Feld ist leer | 
 | 10.1 | Zahl eingegeben      | Zahl überprüfen   | falsche Zahl wird rot markiert | 
 
-✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
 
 ### 1.4 Diagramme
 
@@ -74,7 +73,7 @@ Total: 570'
 
 ## 3 Entscheiden
 
-✍️ Dokumentieren Sie hier Ihre Entscheidungen und Annahmen, die Sie im Bezug auf Ihre User Stories und die Implementierung getroffen haben.
+Wir haben uns entschieden, dieses Projekt grösstenteils mit Pair Programming umzusetzen.
 
 ## 4 Realisieren
 
