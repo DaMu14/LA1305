@@ -89,8 +89,24 @@ Total: 570'
 
 | TC-№ | Datum | Resultat | Tester |
 | ---- | ----- | -------- | ------ |
-| 1.1  |       |          |        |
-| ...  |       |          |        |
+| 1.1  |14.6.24  |  OK        | Müller       |
+| 1.2  |   14.6.24    | OK         |  Müller      |
+|  1.3      | 14.6.24    |  OK        |  Müller       |
+|  2.1     | 14.6.24        | OK       |  Müller     |
+|  3.1      |14.6.24     | OK         | Müller        |
+|   4.1     | 14.6.24    | OK         |  Müller       |
+|  5.1      | 14.6.24    |   OK       |  Müller       |
+| 5.2       |  14.6.24   |  OK        |  Müller       |
+|  6.1        | 14.6.24    |  OK        |  Müller       |
+|  6.2      | 14.6.24    | OK         | Müller        |
+| 7.1       | 14.6.24    |  OK        |  Müller       |
+| 7.2    | 14.6.24    |  OK        |  Müller       |
+|   7.3 | 14.6.24    |  OK        |  Müller       |
+|  8.1      |14.6.24     | OK         |Müller         |
+| 9.1   | 14.6.24    |  OK        | Müller        |
+ 
+
+
 
 ✍️ Vergessen Sie nicht, ein Fazit hinzuzufügen, welches das Test-Ergebnis einordnet.
 
