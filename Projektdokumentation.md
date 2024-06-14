@@ -25,6 +25,7 @@ In diesem Projekt wollen wir ein Sudoku mit Python programmieren, welches auch i
 | 7  |  Muss     | Funktional    | Als User möchte ich bei den verschiedenen Schwierigkeitsstufen unterschiedlich viele Felder frei haben, damit ich das Spiel besser lernen kann. |
 | 8  | Muss       | Funktional    | Als User möchte ich das Spiel neu starten können , damit ich ohne Probleme weiterspielen kann. |
 | 9  | Muss |    Funktional   | Als User möchte ich die eingegebene Zahl löschen können, damit ich meine Fehler verbessern kann. |
+| 10 | Muss | Funktional      | Als User möchte ich, dass meine falschen Eingaben farblich hervorgehoben werden, damit ich gleich sehe wo der Fehler ist. |
 
 
 ### 1.3 Testfälle
@@ -46,6 +47,7 @@ In diesem Projekt wollen wir ein Sudoku mit Python programmieren, welches auch i
 | 7.3  | Spiel ist gestartet | Schwer auswählen  | Sudokufeld mit 50 leeren Felder |
 | 8.1  | Sudoku gelöst   | neues Spiel auswählen  | Schwierigkeitsstufen werden angezeigt |
 | 9.1  | Anzeige von falscher Zahl | Zahl löschen   | Feld ist leer | 
+| 10.1 | Zahl eingegeben      | Zahl überprüfen   | falsche Zahl wird rot markiert | 
 
 ✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
 
