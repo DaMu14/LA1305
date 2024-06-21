@@ -52,7 +52,6 @@ In diesem Projekt wollen wir ein Sudoku mit Python programmieren, welches auch i
 
 ### 1.4 Diagramme
 
-✍️ Hier können Sie PAPs, Use Case- und Gantt-Diagramme oder Ähnliches einfügen.
 
 ## 2 Planen
 
@@ -89,7 +88,6 @@ Wir haben uns entschieden, dieses Projekt grösstenteils mit Pair Programming um
 | 8.A  | 31.05.2024 | Müller  | 30'           |  30'           |
 | 9.A  | 22.05.2024 | Hitz    | 30'           |  30'           |
 
-✍️ Tragen Sie jedes Mal, wenn Sie ein Arbeitspaket abschließen, hier ein, wie lang Sie effektiv dafür hatten.
 
 ## 5 Kontrollieren
 
@@ -116,6 +114,5 @@ Wir haben uns entschieden, dieses Projekt grösstenteils mit Pair Programming um
 
 
 
-✍️ Vergessen Sie nicht, ein Fazit hinzuzufügen, welches das Test-Ergebnis einordnet.
-
+Die waren alle korrekt, was sich auch in unserem Projekt zeigt.
 # Portfolioeintrag
